@@ -10,10 +10,12 @@ class App extends React.Component {
                   <h1 className="App-title">TV Series List</h1>
               </header>
               <Intro message="Here you can find all of your most loved series." />
-              
+              <Series></Series>
+
           </div>
       );
   }
 }
+// for some reason, if I add in series list, it crashes everything
 
   export default App;

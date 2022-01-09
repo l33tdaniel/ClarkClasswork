@@ -1,17 +1,22 @@
-import './SeriesList.css';
-import '../../containers/Series/Series.js';
 import React from 'react';
-function SeriesList(props) {
 
+import './SeriesList.css';
+
+function SeriesList(props) {
     return (
         <div>
-            <ul>
+            <ul className="series-list">
                 {props.list.map(series => (
-                    <li>{series.show.name}</li>
+                    <SeriesListItem series={series} key={series.show.id} />
                 ))}
             </ul>
         </div>
     )
 }
 
+function SeriesListItem({series}) {
+    return (
+        <li key={series.show.id}>{series.show.name}</li>
+    )
+}
 export default SeriesList;
