@@ -7,4 +7,6 @@ function Intro(props) {
         </p>
     )
 }
+
 export default Intro;
+
