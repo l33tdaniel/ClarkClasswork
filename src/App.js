@@ -1,4 +1,5 @@
 import Intro from './components/Intro.js';
+import SeriesList from './components/SeriesList/SeriesList.js';
 import React from 'react';
 import Series from './containers/Series/Series.js';
 class App extends React.Component {
@@ -9,7 +10,7 @@ class App extends React.Component {
                   <h1 className="App-title">TV Series List</h1>
               </header>
               <Intro message="Here you can find all of your most loved series." />
-              <Series/>
+              
           </div>
       );
   }
