@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './SeriesList.css';
-
 function SeriesList(props) {
 
     return (
