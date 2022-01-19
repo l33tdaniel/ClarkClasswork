@@ -36,6 +36,8 @@ class WrappedSeasons extends React.Component {
     }    
 }
 
+
+// this is a hook
 // important note - this is the exported function which wraps the above class with hooked props
 function Seasons(props) {
     const params = useParams();
