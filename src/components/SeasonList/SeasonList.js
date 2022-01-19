@@ -1,5 +1,5 @@
+import Seasons from '../../containers/Seasons/Seasons.js';
 function SeasonList(props) {
-
     return (
         <div className="show-list-container">
             <ul className="show-list">
@@ -37,4 +37,6 @@ function SeasonListItem({ season }) {
     )
 }
 
-export default SeasonListItem;
+
+// I don't think that I have the right imports or something
+export default SeasonList;
