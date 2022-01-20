@@ -19,7 +19,7 @@ class WrappedEpisodes extends React.Component {
         .then(response => response.json())
         .then(json => this.setState({ episodesName: json.name }));
         // get the episodes of the show
-        fetch(`https://api.tvmaze.com/shows/${showID}/episodes`)
+        fetch(`https://api.tvmaze.com/seasons/${showID}/episodes`)
         .then(response => response.json())
         .then(json => this.setState({ episodes: json }));
     }
