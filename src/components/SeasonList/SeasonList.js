@@ -37,6 +37,5 @@ function SeasonListItem({ season }) {
     )
 }
 
-
 // I don't think that I have the right imports or something
 export default SeasonList;

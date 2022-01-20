@@ -1,4 +1,4 @@
-import Episodes from '../../containers/Episodes/Episodes.js';
+
 function EpisodeList(props) {
     return (
         <div className="show-list-container">
@@ -13,9 +13,10 @@ function EpisodeList(props) {
 
 function EpisodeListItem({ episode }) {
     const episodeID = episode.id;
+    const episodeName = episode.name;
     const episodeNumber = episode.number;
-    const episodeStart = episode.premiereDate;
-    const episodeEnd = episode.endDate;
+    const episodeStart = episode.airdate;
+    const episodeLength = episode.airtime;
     let episodeImage = "https://place-hold.it/107x150";
     let episodeNetwork = '';
     try { episodeImage = episode.image.medium; } catch(e) { }
@@ -23,14 +24,14 @@ function EpisodeListItem({ episode }) {
     return (
         <li key={episodeID}>
             <a href={"/episode/" + episodeID + "/episodes"}>
-                <div className="ib w20">
+                <div className="ib w40">
                     <img src={episodeImage} alt="" />
                 </div>
-                <div className="ib w80">
-                    <h2>episode {episodeNumber}</h2>
-                    <div>Network: {episodeNetwork}</div>
+                <div className="ib w60">
+                    <h2>Episode {episodeNumber}</h2>
+                    <div>Title: {episodeName}</div>
                     <div>Premiere Date: {episodeStart}</div>
-                    <div>End Date: {episodeEnd}</div>                
+                    <div>Episode Length: {episodeLength}</div>                
                 </div>
             </a>
         </li>
